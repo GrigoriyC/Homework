@@ -1,0 +1,86 @@
+table{
+/*установливаем ширину таблицы в % от ширины body*/
+width: 80%;
+/*
+чтобы таблица сильно не сжималась и не растягивалась
+при изменении ширины окна браузера, прописываем
+минимальную и максимальную ширину в пикселях
+*/
+min-width: 650px;
+/*max-width: 800px;*/
+max-width: 900px;
+/*распологаем таблицу по середине по горизонтали*/
+margin: 3em auto;
+/*убираем отступы между ячейками*/
+border-collapse: collapse;
+/*устанавливаем системный шрифт для текста*/
+font-family: Arial, Helvetica, sans-serif;
+text-align: center;
+}
+
+th {
+    border: 1px solid #AEAEB7;
+    padding: 10px;
+}
+
+td {
+    border: 1px solid #AEAEB7;
+    padding: 10px;
+}
+
+tr {
+    height: 40px;
+}
+
+
+/*
+каждой колонке, на которые разбили таблицу, задаем
+фоновый цвет и ширину, причем четыре колонки будут
+иметь одинаковую ширину, а ширина первой колонки будет
+высчитываться автоматически
+*/
+.col-1{
+background-color: #FFF0A2;
+width: auto;
+text-align: center;
+}
+.col-2{
+background-color: #FFF0A2;
+width: 3%;
+}
+.col-3{
+background-color: #D1D1FF;
+width: 22%;
+}
+.col-4{
+background-color: #FFC2C2;
+width: 22%;
+}
+.col-5{
+background-color: #B2FFD1;
+width: 22%;
+}
+.col-6{
+background-color: #FFC2FF;
+width: 22%;
+}
+
+.f_bold {
+    font-weight: bold;
+}
+
+.f_cursive{
+    font-style: italic;
+    font-size: 80%;
+    text-align: left;
+}
+
+.f_cursive2 {
+    font-style: italic;
+}
+
+.f_upper {
+    text-transform: uppercase;
+}
+
+
