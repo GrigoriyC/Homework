@@ -1,0 +1,102 @@
+/* Naznachayem statndartnuyu blochnuyu model'. */
+* {
+    box-sizing: content-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    background-color: white; 
+    /* Sleduyuschiye dve strochki nuzni, chtobi bloki <div> 
+    raspolagalis' drug pod drugom po vertikali. */
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    background-color: #95eefd;  
+    padding-left: 10px;
+}
+
+nav {
+    margin: 1px 20px 10px 20px;
+    background-color: #eafcd6; 
+}
+
+/* Sozdayem klass, v kotorom naznachim tsvet dlya vsego bloka, v kotorom nahodyatsya bloki "header" i "nav". */
+.head_block {
+    background-color: #95eefd; 
+    padding-bottom: 5px;
+}
+
+article {
+    background-color: #b4d6ff; 
+    }
+
+aside {
+    background-color: #cdb7ec; 
+}
+
+article, aside {
+    height: calc( 70vh );
+    margin-top: 1em;
+}
+
+section {
+    background-color: #feb86e; 
+    height: calc( 30% - 20px );
+    margin: 1px 20px 1px 20px;
+}
+
+p {
+    padding-left: 2em;
+}
+
+header p {
+    padding-left: 1.5em;
+}
+
+nav p {
+    padding: 0.2em 0.5em  0.2em  1em;
+}
+
+article p {
+    padding-top: 0;
+}
+
+section p {
+    padding: 0.5em 1em 1em 5em;
+}
+
+aside p {
+    padding-left: 1em;
+}
+
+footer p {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+/* Sozdayem klass, chtobi raspolozit' blok "article" sleva stranitsi. */
+.left {
+  float: left;
+  width: 63%;
+  margin: 0.5% 0.5% 0.5% 0;
+}
+
+/* Sozdayem klass, chtobi raspolozit' blok "aside" sprava stranitsi. */
+.right {
+  float: right;
+  width: 36%;
+  margin: 0.5% 0 0.5% 0.5%;
+}
+
+footer {
+    background-color: #8ae7fc; 
+    margin: 0px;
+    padding: 0;
+}
