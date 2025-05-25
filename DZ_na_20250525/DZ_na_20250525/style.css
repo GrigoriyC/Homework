@@ -1,0 +1,69 @@
+/* Zadayem parametri dlya vsey formi. */
+form {
+    /* Shirina formi. */
+    width: 800px;
+    /* Tsvet (zalivka) formi. */
+    background-color: rgb(53, 106, 160);
+    /* Tsvet teksta. */
+    color: white;
+}
+
+/* Zadayem parametri dlya tega <fieldset>. */
+fieldset {
+    /* Zadayem razmer vnutrennego levogo otstupa. */
+    padding-left: 10px;
+}
+
+/* Zadayem parametri dlya tega <legend>. */
+legend {
+    /* Zadayem razmer veshnego otstupa so vseh storon. */
+    margin: 10px;
+}
+
+/* Sozdayem klass "grid_table" i zadayem yemu parametri. */
+.grid_table {
+    /* Ukazivayem, chto yeto budet cetka (grid). */
+    display: grid;
+    /* Zadayem shirinu stolbtsov (kolonok) v %-ah ot shirini vsei formi - 40% dlya pervogo stolbtsa, 60% dlya vtorogo stolbtsa. */
+    grid-template-columns: 40% 60%;
+}
+
+/* Zadayem vnutrenniye otstupi so vseh storon dlya tega <div>, kotoriye budut primenyatsya dlya vseh tegov <div>. */
+div {
+    padding: 15px;
+}
+
+/* Sozdayem klass dlya elementov, kotoriye nahodyatsya v 1-om stolbtse i dolzni "prizimat'sa" k pravoy yego storone. */
+.container_1 {
+    /* Zadayem parametr dlya teksta tak, chtobi on raspolagasya s pravoy storoni. */
+    text-align: right;
+}
+
+/* Sozdayem klass dlya elementov, kotoriye nahodyatsya vo 2-om stolbtse i dolzni "prizimat'sa" k levoy yego storone. */
+.container_2 {
+    /* Zadayem parametr dlya teksta tak, chtobi on raspolagasya s levoy storoni. */
+    text-align: left;
+}
+
+/* Zadayem parametri dla vseh elementov, kotoriye raspolagayutsya vnutri tega <input>. */
+input[type="text"] {
+    /* Radius zakrugleniya uglov. */
+    border-radius: 5px; 
+    /* Shirina okna. */
+    width: 250px;
+    /* Tsvet teksta. */
+    color: black;
+}
+
+/* Sozdayem klass, v kotorom zadayem shirinu dlya polya c vipadayuschim spiskom, kotoroye razmescheno naprotiv slova "Branch". */
+.inp_select_branch {
+    width: 150px;
+}
+
+/* Sozdayem klass, v kotorm zadayem parametri dla vseh vipadayuschih spiskov, kotoriye zadayutsya tegom <select>. */
+.inp_select {
+    width: 50px;
+    border-radius: 5px;
+}
+
+

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Sozdayem formu tegom <form>. -->
+<form action="/submit" method="post">
+    <!-- Sozdayem <fieldset> dlya gruppirovki elementov v forme. -->
+    <fieldset>
+
+    <!-- Dobavlyayem <legend> s opisaniyem formi. -->
+    <legend>Registration Details</legend>
+
+    <!-- Sozdayem obschiy konteyner <div> dlya vseh "div"-ov v etoy forme.
+        Zadayem etomu "div"-u "class="grid_table"" -->
+    <div class="grid_table">
+
+    <!-- Daleye sozdayem konteyneri s pomoschyu tega <div> dlya kazdogo elementa otdel'no i dlya etih "div"ov ukazivayem klassi:
+        - "class="container_1"" - dlya elementov, kotoriye dolzni raspolagat'sya v levoy chasti formi,
+        - "class="container_2"" - dlya elementov, kotoriye dolzni raspolagat'sya v pravoy chasti formi. -->
+
+    <div class="container_1">
+        <label for="university">University:</label>
+    </div>
+
+    <div class="container_2">
+        <input type="text" id="university" name="university" required>
+    </div>
+
+    <div class="container_1">
+        <label for="institute">Institute:</label>
+    </div>
+
+    <div class="container_2">
+        <input type="text" id="institute" name="institute" required>
+    </div>
+
+    <div class="container_1">
+        <label for="branch" class="inp_select_branch">Branch:</label>
+    </div>
+
+    <div class="container_2">
+        <select id="branch" name="branch" class="inp_select_branch" required>
+            <option>--select--</option>
+        </select>
+    </div>
+
+    <div class="container_1">
+        <label for="degree">Degree:</label>
+    </div>
+
+    <div class="container_2">
+        <select id="degree" name="degree" required>
+            <option>--select--</option>
+        </select>
+    <input type="radio" id="pursuing" name="choice" value="pursuing"> <label for="pursuing">Pursuing</label>  
+    <input type="radio" id="completed" name="choice" value="completed"> <label for="completed">Completed</label>
+    </div>
+
+    <div class="container_1">
+        <label for="avarage">Avarage CPI:</label>
+    </div>
+
+    <div class="container_2">
+        <select class="inp_select" name="avarage" size="2" multiple></select> 
+        <label for="upto">Upto:</label>
+        <select class="inp_select" name="upto" size="2" multiple></select> 
+        Th Semester
+    </div>
+
+    <div class="container_1">
+        <label for="experience">Experience:</label>
+    </div>
+
+    <div class="container_2">
+        <select class="inp_select" name="experience" size="2" multiple></select>  Years
+    </div>
+
+    <div class="container_1">
+        <label for="website">Your Website Or Blog:</label>
+    </div>
+
+    <div class="container_2">
+        <input type="text" name="website" required placeholder="http://">
+    </div>
+
+    <!-- Zakrivayem obschiy teg <div>. -->
+    </div>
+
+    <!-- Zakrivayem teg <fieldset>. -->
+    </fieldset>
+</form>
+
+</body>
+</html>
