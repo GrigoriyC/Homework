@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js8</title>
+</head>
+<body>
+
+<script>
+
+// zaprashivaem summu deneg v koshelke.
+let walletAmount = prompt ("Введите сумму денег в кошельке, руб.: ");
+
+// zaprashivaem cenu odnoi shokoladki.
+let priceСhocolate = prompt ("Введите цену одной шоколадки, руб.: ");
+
+// vychislyaem kolichestvo shokoladok.
+let numberСhocolates = parseInt(walletAmount / priceСhocolate);
+
+alert ("Вы можете купить шоколадок в количестве - " + numberСhocolates + " шт.");
+
+// vychislyaem kolichestvo sdachi.
+alert ("Ваша сдача - " +  (walletAmount - numberСhocolates*priceСhocolate) + " руб.");
+
+</script>
+
+</body>
+</html>

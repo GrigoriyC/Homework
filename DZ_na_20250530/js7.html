@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js7</title>
+</head>
+<body>
+    
+<script>
+//-- zaprashivaem u polzovatela obyem fleshki v GB. 
+let volumeFlash = prompt ( "Введите объём вашей флешки в GB: " );
+
+// perevodim GB v MB + polucsenniy rezultat delim na 820 MB.
+let numberFiles = parseInt((volumeFlash * 1024) / 820);
+
+// vivodim na ekran rezultat.
+alert ( "На вашу флешку поместится - " + numberFiles + " файлов объёмом 820 MB."  )
+
+</script>
+    
+</body>
+</html>
