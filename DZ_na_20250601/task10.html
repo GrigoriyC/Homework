@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task10</title>
+</head>
+<body>
+    
+<script>
+
+// Obiyavlyayem funktsiyu, kotoraya budet proveryat' vvodimiye danniye i,
+// esli oni pravil'niye, vozvraschat' ih znacheniye programme.
+// num1 - minimal'noye dopustimoye znacheniye,
+// word - dlya kakogo parametra vvodyatsya znacheniya,
+// num2 - maksiimal'noye dopustimoye znacheniye,
+// specifiedDate - peremennaya, v kotoroy vozvraschayetsya pravil'noye vvedyennoye znacheniye.
+function checkData(num1, word, num2) {
+      specifiedDate = prompt ("Введите " + word + " числом от " + num1 + " до " + num2 )
+      if ( num1 <= specifiedDate && specifiedDate <= num2 ) 
+    {
+        return specifiedDate;
+    }
+    else
+        checkData(num1, word, num2);
+    
+}
+
+// Zaprashivyem nomer dnya.
+// Zadayem peremennuyu, v kotoroy sohranim vvedennoye chislo dlya dnya.
+let specifiedDay = 0;
+// Vizivayem funktsiyu dlya polucheniya ot po'zovatelya nomera dnya.
+checkData(1, "день", 31)
+// Sohranyayem poluchennoye chislo dlya dnya v peremennuyu specifiedDay.
+specifiedDay = specifiedDate;
+
+// Zaprashivyem nomer mesyatsa.
+// Zadayem peremennuyu, v kotoroy sohranim vvedennoye chislo dlya mesyatsa.
+let specifiedMonth = 0;
+// Vizivayem funktsiyu dlya polucheniya ot po'zovatelya nomera mesyatsa.
+checkData(1, "месяц", 12)
+// Sohranyayem poluchennoye chislo dlya mesyatsa v peremennuyu specifiedMonth.
+specifiedMonth = specifiedDate;
+
+// Zaprashivyem nomer goda.
+// Zadayem peremennuyu, v kotoroy sohranim vvedennoye chislo dlya goda.
+let specifiedYear = 0;
+// Vizivayem funktsiyu dlya polucheniya ot po'zovatelya nomera goda.
+checkData(1000, "год", 9999)
+// Sohranyayem poluchennoye chislo dlya goda v peremennuyu specifiedYear.
+specifiedYear = specifiedDate;
+
+// Vichislyayem, yavlyayetsya li etot god visikosnim.
+// Zadayem peremennuyu quantity, v kotoruyu posle vypolneniya funktsii leapYear(year) sohranim znacheniye 1, esli god visokosniy,
+// zadayem peremennuyu quantity, v kotoruyu posle vypolneniya funktsii leapYear(year) sohranim znacheniye 2, esli god ne visokosniy
+let quantity = 0;
+// Obiyavlyayem funktsiyu leapYear(year), kotoroy budem uznavat', yavlyayetsya li god visokosnim ili net.
+function leapYear(year) {
+    if (
+        year % 100 === 0 ? year % 400 === 0 : year % 4 === 0
+    )
+        // Esli vvedyenniy god - visokosniy, sohranyayem v peremennuyu quantity = 1.
+        quantity = 1;
+    else
+        // Esli vvedyenniy god - ne visokosniy, sohranyayem v peremennuyu quantity = 2.
+        quantity = 2;
+    // Vozvraschayem programme poluchennoye znacheniye peremennoy quantity.
+    return quantity;
+}
+
+// Zadayem peremennuyu, v kotoruyu budem sohranyat' poluchennoye znacheniye peremenniy quantity dlya dal'neyshih vychisleniy.
+let valueLeapYear = 0;
+// Vyzivayem funktsiyu leapYear(year) i uznayem , yavlyayetsya li god visokosnim ili net.
+leapYear(specifiedYear);
+// V peremennuyu  sohranyayem znachenie, kotoroye bylo polucheno v peremennoy quantity iz funktsii..
+valueLeapYear = quantity;
+
+// mesyaci is 31 dnya: yanvar', mart, may, iyul', avgust, oktyabr', dekabr'.
+// mesyaci is 30 dney: aprel', iun', sentyabr', noyabr'.
+
+// Zadayem funktsiyu checkDate (isDay, isMonth, isYear), v kotoroy budem vyschityvat' datu,
+// kotoraya sleduyet posle toy, kotoruyu ukazet pol'zovatel'.
+// Dlya vypolneniya etoy funktsii neobhodimo ukazat':
+// - isDay - nomer dnya,
+// - isMonth - nomer mesyatsa,
+// - isYear - nomer goda v promezutke ot 1000 do 9999 vklyuchitel'no.
+function checkDate (isDay, isMonth, isYear) {
+// Esli vvedeno chislo, kotoroye men'she, chem 31 dlya mesyatsev - yanvar', mart, may, iyul', avgust,
+// chislo dnya (specifiedDay) uvelichivayem na 1, mesyats i god ostavlyayem bez izmeneniya.
+// Ispol'zuyemaya funktsiya Number() delayet iz stroki chislo. Eto nuzno dlya vypolneniya 
+// deystviy nad chislami.
+if ( Number(isDay) < 31 && Number(isMonth) === 1 ||
+    Number(isDay) < 31 && Number(isMonth) === 3 || 
+    Number(isDay) < 31 && Number(isMonth) === 5 || 
+    Number(isDay) < 31 && Number(isMonth) === 7 || 
+    Number(isDay) < 31 && Number(isMonth) === 8 || 
+    Number(isDay) < 31 && Number(isMonth) === 10 ) 
+    {
+    // Dlya togo, ctobi nomera dney i mesyatsev, kotoriye men'she 10, 
+    // nachinalis' s nulya, ispol'zuyem padStart(2, '0') - zdes' 2 znachit obscheye kolichestvo simvolov vmeste s 0, 
+    // 0 znachit, chto esli chislo men'she 10, to pered nim nuzno dobavit' 0.
+    alert( (Number(isDay) + Number(1)).toString().padStart(2, '0') + "." + (Number(isMonth)).toString().padStart(2, '0') + "." + Number(isYear));
+    }
+// Esli vvedeno chislo, kotoroye men'she, chem 30 dlya mesyatsev - aprel', iyun', sentyabr', noyabr',
+// chislo dnya uvelichivayem na 1, mesyats i god ostavlyayem bez izmeneniya.
+// i k nomeru mesyatsa vperedi dobavlyayem 0.
+else if ( Number(isDay) < 30 && Number(isMonth) === 4 ||
+    Number(isDay) < 30 && Number(isMonth) === 6 || 
+    Number(isDay) < 30 && Number(isMonth) === 9 || 
+    Number(isDay) < 30 && Number(isMonth) === 11 ) 
+    {
+    // Dlya togo, ctobi nomera dney i mesyatsev, kotoriye men'she 10, 
+    // nachinalis' s nulya, ispol'zuyem padStart(2, '0') - zdes' 2 znachit obscheye kolichestvo simvolov vmeste s 0, 
+    // 0 znachit, chto esli chislo men'she 10, to pered nim nuzno dobavit' 0.
+    alert( (Number(isDay) + Number(1)).toString().padStart(2, '0') + "." + (Number(isMonth)).toString().padStart(2, '0') + "." + Number(isYear));
+    }
+// Esli vvedeno chislo 31 dlya mesyatsev - yanvar', mart, may, iyul', avgust,
+// isDay menyayem na 1, a chislo mesyatsa uvelichivayem na 1, chobi byl ukazan sleduyuschiy mesyats,
+// i k nomeru mesyatsa vperedi dobavlyayem 0.
+else if ( Number(isDay) === 31 && Number(isMonth) === 1 ||
+    Number(isDay) === 31 && Number(isMonth) === 3 || 
+    Number(isDay) === 31 && Number(isMonth) === 5 || 
+    Number(isDay) === 31 && Number(isMonth) === 7 || 
+    Number(isDay) === 31 && Number(isMonth) === 8 || 
+    Number(isDay) === 31 && Number(isMonth) === 10 ) 
+    {
+    isDay = 1;
+    // Dlya togo, ctobi nomera dney i mesyatsev, kotoriye men'she 10, 
+    // nachinalis' s nulya, ispol'zuyem padStart(2, '0') - zdes' 2 znachit obscheye kolichestvo simvolov vmeste s 0, 
+    // 0 znachit, chto esli chislo men'she 10, to pered nim nuzno dobavit' 0.
+    alert( Number(isDay).toString().padStart(2, '0') + "." + (Number(isMonth) + Number(1)).toString().padStart(2, '0') + "." + Number(isYear));
+    }
+// Esli vvedeno chislo 30 dlya mesyatsev - aprel', iyun', sentyabr', noyabr',
+// chislo dnya menyayem na 1, a chislo mesyatsa uvelichivayem na 1, chobi byl ukazan sleduyuschiy mesyats,
+// i k nomeru mesyatsa vperedi dobavlyayem 0.
+else if ( Number(isDay) === 30 && Number(isMonth) === 4 ||
+    Number(isDay) === 30 && Number(isMonth) === 6 || 
+    Number(isDay) === 30 && Number(isMonth) === 9 || 
+    Number(isDay) === 30 && Number(isMonth) === 11 ||
+    Number(isDay) === 29 && Number(isMonth) === 2 && valueLeapYear === 1 ) 
+    {
+    isDay = 1;
+    // Dlya togo, ctobi nomera dney i mesyatsev, kotoriye men'she 10, 
+    // nachinalis' s nulya, ispol'zuyem padStart(2, '0') - zdes' 2 znachit obscheye kolichestvo simvolov vmeste s 0, 
+    // 0 znachit, chto esli chislo men'she 10, to pered nim nuzno dobavit' 0.
+    alert( Number(isDay).toString().padStart(2, '0') + "." + (Number(isMonth) + 1).toString().padStart(2, '0') + "." + Number(isYear));
+    }
+// Esli vvedeno 31 chislo dlya dekabrya, nomer dnya menyayem na 1 i nomer mesyatsa menyayem na 1, 
+// nomer goda menyayem na sleduschiy (uvelichivayem na 1).
+else if (
+    Number(isDay) === 31 && Number(isMonth) === 12 ) 
+    {
+    isDay = 1;
+    isMonth = 1;
+    // Dlya togo, ctobi nomera dney i mesyatsev, kotoriye men'she 10, 
+    // nachinalis' s nulya, ispol'zuyem padStart(2, '0') - zdes' 2 znachit obscheye kolichestvo simvolov vmeste s 0, 
+    // 0 znachit, chto esli chislo men'she 10, to pered nim nuzno dobavit' 0.
+    alert( Number(isDay).toString().padStart(2, '0') + "." + (Number(isMonth)).toString().padStart(2, '0') + "." + (Number(isYear) + Number(1)));
+    }
+// Esli vvedeno 28 chislo dlya fevralya visokosnogo goda, to k 28 pribavlyayem 1 (uvelichivayem datu dnya na 1).
+else if ( Number(isDay) === 28 && Number(isMonth) === 2 && valueLeapYear === 1 )
+    // Dlya togo, ctobi nomera dney i mesyatsev, kotoriye men'she 10, 
+    // nachinalis' s nulya, ispol'zuyem padStart(2, '0') - zdes' 2 znachit obscheye kolichestvo simvolov vmeste s 0, 
+    // 0 znachit, chto esli chislo men'she 10, to pered nim nuzno dobavit' 0.
+    alert((Number(isDay) + Number(1)).toString().padStart(2, '0') + "." + Number(isMonth).toString().padStart(2, '0') + "." + Number(isYear))
+
+else if ( Number(isDay) === 28 && Number(isMonth) === 2 && valueLeapYear === 2 )
+    // Dlya togo, ctobi nomera dney i mesyatsev, kotoriye men'she 10, 
+    // nachinalis' s nulya, ispol'zuyem padStart(2, '0') - zdes' 2 znachit obscheye kolichestvo simvolov vmeste s 0, 
+    // 0 znachit, chto esli chislo men'she 10, to pered nim nuzno dobavit' 0.
+    {
+    isDay = 1;
+    alert((Number(isDay) ).toString().padStart(2, '0') + "." + (Number(isMonth) + Number(1)).toString().padStart(2, '0') + "." + Number(isYear))    
+    }
+    // Dlya vseh ostal'nih sluchayev vyvodim soobscheniye, chto vvedeno nevernoye znacheniye.
+else {
+    alert("Введено неверное значение.");
+    }
+}
+
+// Vizivayem funktsiyu checkDate (isDay, isMonth, isYear) dlya vychisleniya daty,
+// kotoraya sleduyet za toy, kotoruyu ukazet pol'zovatel'.
+// Na vhod dayem etoy funktsii chisla, kotoriye ukazal pol'zovatel' dlya dnya (specifiedDay), mesyatsa (specifiedMonth) i goda (specifiedYear).
+checkDate (specifiedDay, specifiedMonth, specifiedYear);
+
+</script>
+
+</body>
+</html>

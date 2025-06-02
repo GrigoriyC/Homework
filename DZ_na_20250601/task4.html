@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task4</title>
+    <script>
+        function leapYear(year) {
+    if (
+        year % 100 === 0 ? year % 400 === 0 : year % 4 === 0
+    )
+        alert(year + " - високосный год.");
+    else
+        alert(
+            year + " - не високосный год."
+        );
+}
+
+let specifyYear = prompt("Введите год: ");
+leapYear(specifyYear);
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>
