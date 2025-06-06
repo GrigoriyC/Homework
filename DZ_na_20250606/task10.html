@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task10</title>
+    <script>
+        // vivodim soobschenie v kotorom prosim zagadat' chiclo.
+        let hiddenNumber = Number(alert("Загадайте число от 1 до 100"));
+        // zadaem peremennuyu dlya nijnego predela.
+        let lowerLimit = 0;
+        // zadaem peremennuyu dlya verhnego predela.
+        let upperLimit = 100;
+        // zadayem peremennuyu N, v kotoruyu budem sohranyat' rezultat vichisleniy.
+        let N = 50;
+
+        // zapuskaem cikl dlya vipolneniya igri.
+    while (hiddenNumber !== N ) {
+        // zadaem peremennuyu, v kotoruyu sohranyaem vibor polzovatelya i znak arifmeticheskogo deistviya.
+        let answer = prompt(`Ваше число >, <, или равно ${N}`, '>, <, =');
+        // zapuskaem operator if, v kotorom vipolnyaem podschet, 
+        // v zavisimosti ot vibrannogo znaka.
+        if (answer == '>') {
+            lowerLimit = N;
+            //  s pomosh'yu Math.ceil() okruglyaem argument do blijaishego bol'shego celogo.
+            N = Math.ceil((upperLimit - lowerLimit) / 2 + lowerLimit);
+        } else if (answer == '<') {
+            upperLimit = N; 
+            N = Math.ceil((upperLimit - lowerLimit) / 2 + lowerLimit);
+        } else {
+            break;
+        };
+    };
+    alert(`Задуманное число ${N}`);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

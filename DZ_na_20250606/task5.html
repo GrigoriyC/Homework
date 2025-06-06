@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task5</title>
+    <script>
+        // zadaem peremennuyu dlya podscheta polojitel'nih chisel.
+        let posit = 0;
+        // zadaem peremennuyu dlya podscheta otricatel'nih chisel.
+        let negat = 0;
+        // zadaem peremennuyu dlya podscheta nuley.
+        let zero = 0;
+        // zadaem peremennuyu dlya podscheta chetnih chisel.
+        let even = 0;
+        // zadaem peremennuyu dlya podscheta nechetnih chisel.
+        let odd = 0;
+
+    // Zapuskaem cikl, v kotorom schitaem kolichestvo chisel, zadannih v zadache: 
+    //polojitel'nie, otricatel'nie, nuli, chetnie, nechetnie.
+    // Zaprashivaem u polzovatelya 10 chisel.
+    for (let i = 1; i <= 10; i++ ) {
+        const num = prompt("Введите число");
+        
+        if (num > 0) {
+        posit++;
+        };
+        if (num < 0) {
+        negat++;
+        };
+        if (num == 0) {
+        zero++;
+        };
+        if (num % 2 == 0) {
+        even++;
+        };
+        if (num % 2 !== 0) {
+        odd++;
+        };
+    };
+    // Vivodim na ekran rezultati vichisleniy.
+    alert(` Из введенных цифр - положительных: ${posit}, отрицательных: ${negat}, нулей: ${zero}, четных: ${even}, нечетных: ${odd}.`)
+
+    </script>
+
+</head>
+<body>
+
+    
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task6</title>
+    <script>
+        
+        // zapuskaem cikl do...while, kotoriy budet vipolnyat'sya,
+        // poka etogo hochet polzovatel.
+        do {
+        // Zaprashivaem u polzovatelya pervoe i vtoroe chislo i matematicheskiy operator.
+        let firstNumb = prompt(' Введите первое число');
+        let secondNumb = prompt(' Введите второе число');
+        let operator = prompt(' Введите математический оператор', '+, -, *, /')
+        // v peremennuyu answer sohranyaem rezultat vichisleniy.
+        let answer = eval(`${firstNumb} ${operator} ${secondNumb}`);
+        //vivodim na ekran rezultat vichisleniy.
+        alert(`Ответ ${answer}`);
+        
+    } while (confirm(' Решить еще один пример?'));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

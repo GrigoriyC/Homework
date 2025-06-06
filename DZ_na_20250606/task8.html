@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task8</title>
+    <script>
+        // zadayem peremennuyu, v kotoruyu sohranyaem massiv 
+        // iz nazvaniy dnei nedeli.
+        const days = ["понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"];
+        // zadayem peremennuyu dlya dnya nedeli. Nachalo nedeli - ponedel'nik.
+    let dayCurrent = 0;
+    // zadayem peremennuyu dlya sleduyuchego dnya nedeli.
+    let dayNext;
+    // zapuskaem cikl do...while dlya zaciklivaniya vivoda dney nedeli.
+    do {
+        alert(`День недели - ${days[dayCurrent]}.`);
+        dayNext = confirm(' Хотите увидеть следующий день?');
+        dayCurrent++;          
+        if (dayCurrent === days.length) {
+            dayCurrent = 0;
+        };         
+
+    } while (dayNext);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
