@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task9</title>
+    <script>
+
+      function quest() {
+      function timeCounting(a) {
+        let hours = Math.trunc(a / 3600);
+        let minutes = Math.trunc((a - hours * 3600) / 60);
+        let seconds = Math.trunc(a - hours * 3600 - minutes * 60);
+
+        if (hours < 10) {
+          hours = "0" + hours;
+        }
+        if (minutes < 10) {
+          minutes = "0" + minutes;
+        }
+        if (seconds < 10) {
+          seconds = "0" + seconds;
+        }
+        let current_time = `${hours}:${minutes}:${seconds}`;
+        return current_time;
+      }
+
+      let input_seconds = 0;
+      do {
+        input_seconds = Math.abs(
+          Math.trunc(+prompt("Введите секунды для перевода их в текущее время: "))
+        );
+      } while (input_seconds != +input_seconds);
+
+      alert(timeCounting(input_seconds));
+    }
+    quest();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

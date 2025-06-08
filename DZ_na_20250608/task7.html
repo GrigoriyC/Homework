@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task7</title>
+    <script>
+
+function quest() {
+  function showTime(a, b = 0, c = 0) {
+    if (a < 10) {
+      a = "0" + a;
+    }
+    if (b < 10) {
+      b = "0" + b;
+    }
+    if (c < 10) {
+      c = "0" + c;
+    }
+    return `${a}:${b}:${c}`;
+  }
+
+  let x = 0;
+  let y = 0;
+  let z = 0;
+
+  do {
+    x = Math.abs(Math.trunc(+prompt("Введите часы от 0 до 23: ")));
+    y = Math.abs(Math.trunc(+prompt("Введите минуты от 0 до 59: ")));
+    z = Math.abs(Math.trunc(+prompt("Введите секунды от 0 до 59: ")));
+  } while (x > 23 || y > 59 || z > 59);
+
+  alert("Указанное время: " + showTime(x, y, z));
+}
+quest();
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

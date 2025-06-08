@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task1</title>
+    <script>
+       
+  function comparingNumbers() {
+  function verify(a, b) {
+    if (a < b) {
+      return -1;
+    } else if (a > b) {
+      return 1;
+    } else if (a == b) {
+      return 0;
+    } else {
+      return "Вы ошиблись при вводе чисел";
+    }
+  }
+  
+  let x = +prompt("Введите первое число для сравнения ");
+  let y = +prompt("Введите второе число для сравнения ");
+
+  alert(verify(x, y));
+}
+  comparingNumbers();
+
+
+
+
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>
