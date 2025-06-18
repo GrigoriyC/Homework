@@ -1,0 +1,46 @@
+header {
+    background-color: aqua;
+    margin: 0;
+    padding: 1em;
+    text-align: center;
+}
+
+nav {
+    background-color: aquamarine;
+    margin-top: 0;
+    padding: 0.5em;
+    font-size: 20px;
+}
+
+footer {
+    background-color: gray;
+    color: lightgray;
+    padding: 2em;
+    font-size: 18px;
+}
+
+p {
+    font-size: 18px;
+}
+
+table {
+   width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.city {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 175px 175px ;
+  grid-gap: 10px;
+  }
+
+.city * {
+    border: 1px solid;
+    padding: 15px;
+}
+
+img {
+        width: 100%;
+    }
