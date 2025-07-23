@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task1</title>
+</head>
+<body>
+    
+<script>
+
+alert("Задание 1.")
+
+// 1 - Работа со строками
+
+// Первая часть задания 1.
+
+// Создайте строку: "Я изучаю JavaScript. Мне это нравится!"
+
+// Проверьте, содержит ли строка слово "JavaScript" (используйте includes)
+// Найдите позицию слова "нравится" в строке (используйте indexOf)
+// Извлеките подстроку "Мне это" (используйте slice)
+// Замените "нравится" на "интересно" и выведите результат
+
+alert("Строка:\n\n Я изучаю JavaScript. Мне это нравится!");
+
+// Определяем переменную для строки:
+const string = "Я изучаю JavaScript. Мне это нравится!";
+// Проверяем, есть ли в этой строке заданное слово "JavaScript":
+alert("Содержит ли эта строка слово \"JavaScript\" - " + string.includes('JavaScript'))
+
+// Находим позицию слова "нравится" в данной строке:
+const searchWord = "нравится";
+const indexOfFirst = string.indexOf(searchWord);
+alert(`Позиция слова "${searchWord}" в этой фразе = ${indexOfFirst}.`);
+
+// Извлекаем подстроку "Мне это":
+// Сначала создаем из строки массив:
+const stringToArray = string.split(' ');
+// После этого извлекаем из массива нужные слова и составляем из них строку:
+const newArray = stringToArray.slice(3, 5);
+const newString = newArray.join(' ');
+alert(`В этой строке есть подстрока - "${newString}".`);
+
+// Заменяем "нравится" на "интересно" и выводим результат:
+const newArray2 = stringToArray.map(item => item === 'нравится!' ? 'интересно!' : item);
+const newString2 = newArray2.join(' ');
+alert(newString2);
+
+
+// Вторая часть задания 1.
+
+// Создайте шаблонную строку, которая будет включать:
+// Ваше имя (переменная)
+// Ваш возраст (переменная)
+// Текущий год (вычисляется как new Date().getFullYear())
+
+// Формат: "Привет, меня зовут [имя]. В [текущий год] мне [возраст] лет."
+
+
+let myName = "John";
+let myYearsOld = 45;
+let currentYear = 2025;
+
+alert(`Привет, меня зовут ${myName}. В ${currentYear} мне ${myYearsOld} лет.`)
+
+
+</script>
+
+</body>
+</html>

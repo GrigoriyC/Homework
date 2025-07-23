@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task2</title>
+</head>
+<body>
+    
+<script>
+
+alert("Задание 2.")
+
+// 2 - Логические операторы
+
+// Первая часть задания 2.
+
+// Объявите переменные:
+// let hasDriverLicense = true;
+// let hasGoodVision = false;
+// let isTired = true;
+
+// Напишите выражения, которые проверяют:
+// Может ли человек водить машину (должны быть права И хорошее зрение)
+// Может ли человек водить машину, если учитывать усталость (должны быть права И хорошее зрение И НЕ быть усталым)
+// Может ли человек водить, если у него есть права И (хорошее зрение ИЛИ он не устал)
+
+let hasDriverLicense = true;
+let hasGoodVision = false;
+let isTired = true;
+
+// Проверяем, может ли человек водить машину:
+if (hasDriverLicense === true && hasGoodVision === true)
+    alert("Человек может водить машину.");
+else
+    alert("Человек НЕ может водить машину.");
+
+// Проверяем, может ли человек водить машину, если учитывать усталость:
+if (hasDriverLicense === true && hasGoodVision === true && isTired === false)
+    alert("Человек может водить машину, потому что у него нет усталости.");
+else
+    alert("Человек НЕ может водить машину, потому что у него есть усталость.");
+
+// Проверяем, может ли человек водить, если у него есть права И (хорошее зрение ИЛИ он не устал):
+// if (hasDriverLicense === true && hasGoodVision === true || hasDriverLicense === true && isTired === false)
+if (hasDriverLicense === true && hasGoodVision === true || hasDriverLicense === true && isTired === false)
+    alert("Человек может водить, так как у него есть права И хорошее зрение ИЛИ у него есть права И он не устал.");
+else
+    alert("Человек НЕ может водить, даже если есть права, так как у него или плохое зрение, или он устал.");
+
+
+// Вторая часть задания 2.
+
+// Преобразуйте следующие значения в boolean используя !!:
+
+// "Hello"
+// 0
+// undefined
+// null
+// ""
+
+// Примечание. Оператор !! действует следующим образом: 
+// первый знак ! приводит значение к логическому и инвертирует его. 
+// Например, !true равняется false. Второй оператор ! снова инвертирует полученное значение. 
+// В нашем примере !false приравнивается к true.
+
+// Задаем переменные.
+const wordHello = "Hello";
+const wordZero = 0;
+const wordUndefined = undefined;
+const wordNull = null;
+const wordEmpty = "";
+
+// Преобразовываем значения в тип boolean:
+alert("Преобразовываем \"Hello\" в тип boolean - " + !!wordHello);
+alert("Преобразовываем 0 в тип boolean - " + !wordZero);
+alert("Преобразовываем undefined в тип boolean - " + !wordUndefined);
+alert("Преобразовываем null в тип boolean - " + !wordNull);
+alert("Преобразовываем \"\" в тип boolean - " + !wordEmpty);
+
+</script>
+
+</body>
+</html>
