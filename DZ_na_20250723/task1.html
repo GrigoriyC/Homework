@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task1</title>
+    <script>     
+       // Запрашиваем первое число
+let num1 = +prompt('Введите первое число:');
+
+// Запрашиваем второе число
+let num2 = +prompt('Введите второе число:');
+
+// Запрашиваем знак операции
+let operation = prompt('Выберите операцию (+, -, *, /):');
+
+// Выполняем операцию в зависимости от выбора
+switch (operation) {
+    case '+':
+        alert(`Результат сложения: ${num1 + num2}`);
+        break;
+    case '-':
+        alert(`Результат вычитания: ${num1 - num2}`);
+        break;
+    case '*':
+        alert(`Результат умножения: ${num1 * num2}`);
+        break;
+    case '/':
+        if (num2 === 0) {
+            alert('Ошибка: деление на ноль невозможно');
+        } else {
+            alert(`Результат деления: ${num1 / num2}`);
+        }
+        break;
+    default:
+        alert('Ошибка: выбран неверный знак операции');
+} 
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

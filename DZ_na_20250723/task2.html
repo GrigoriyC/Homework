@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игра "Угадай число"</title>
+</head>
+<body>
+    
+<script>
+
+// Math.random() всегда выбирает число от 0 до 1, то есть, это всегда будет число = 0,.... ).
+// Если то, что выбрал Math.random() умножить на 10, то этим сдвинем запятую вправо только на одну цифру. 
+// То есть, в этом случае число всегда будет меньше 10.
+// С помощью Math.floor() округляем полученное число до целого числа.
+const numberRandom = Math.floor(Math.random() * 10);
+alert(numberRandom);
+const numberUser = +prompt ("Введите целое число от 1 до 10: ");
+
+switch(numberUser) {
+    case numberRandom:
+        alert("Поздравляю! Вы угадали число!");
+        break;
+    default:
+        alert(`К сожалению, вы не угадали. Загаданное число: ${numberRandom}.`);
+}
+
+</script>
+
+</body>
+</html>
