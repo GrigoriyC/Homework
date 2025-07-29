@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+// Задание на 29.07.2025:
+// Создайте функцию которая принимает 3 параметра: 2 числа и знак операции (+-*/).
+// В зависимости от переданного знака проведите с числами соответствующую операцию и верните результат.
+
+// Определяем переменные:
+// - num1 - для первого числа,
+// - num2 - для второго числа,
+// - oper - для оператора,
+// - resMath - для результата вычислений.
+
+let num1 = 15;
+let num2 = 5;
+let oper = '+';
+let resMath = 0;
+
+//let num1 = 15;
+//let num2 = 5;
+//let oper = '-';
+//let resMath = 0;
+
+//let num1 = 15;
+//let num2 = 5;
+//let oper = '*';
+//let resMath = 0;
+
+//let num1 = 15;
+//let num2 = 5;
+//let oper = '/';
+//let resMath = 0;
+
+//let num1 = 15;
+//let num2 = 0;
+//let oper = '/';
+//let resMath = 0;
+
+// Создаем функцию, которая используя конструкцию if...else выполняет необходимые вычисления и возвращает их результат.
+function calc(num1, num2, oper) {
+  if (oper === '+') 
+      {resMath = num1 + num2;
+    return resMath;}
+  else if (oper === '-')
+      {resMath = num1 - num2;
+    return resMath;}
+  else if (oper === '*')
+      {resMath = num1 * num2;
+    return resMath;}
+  else if (oper === '/')
+        // Проверяем деление на ноль
+        if (num2 === 0) {
+            return 'Ошибка: делить на ноль нельзя'
+}
+        else {resMath = num1 / num2;
+    return resMath;}
+}
+
+// Выводим на экран полученный результат вычислений.
+alert(calc(num1, num2, oper));
+
+</script>
+
+</body>
+</html>
