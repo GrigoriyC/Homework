@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 2.</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="./script.js" defer></script>
+</head>
+<body>
+
+    <!-- Задание 2
+Создать html-страниц с деревом вложенных директорий.
+При клике на элемент списка, он должен сворачиваться или разворачиваться. При наведении на элемент, шрифт должен становиться жирным (с помощью CSS).
+ -->
+
+    <div class="container">
+    <ul id="directoryTree">
+        <li><span class="folder">This PC</span>
+            <ul>
+                <li><span class="folder">Local Disk (C:)</span>
+                    <ul>
+                        <li><span class="folder">Program Files</span></li>
+                        <li><span class="folder">Users</span></li>
+                        <li><span class="folder">Windows</span></li>
+                    </ul>
+                </li>
+                <li><span class="folder">Local Disk (D:)</span>
+                    <ul>
+                        <li><span class="folder">New Folder 1</span></li>
+                        <li><span class="folder">New Folder 2</span></li>
+                        <li><span class="folder">New Folder 3</span></li>
+                    </ul>
+                </li>
+                <li><span class="folder">Local Disk (E:)</span></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 2.</title>
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    
+
+    <!-- Задание 2
+Создать html-страницу для прохождения теста. Вопросы теста имеют два варианта ответа (только 1 правильный). 
+После прохождения теста, вывести количество правильных ответов.
+ -->
+
+    <div class="first_question">
+        <div>
+            <p>Сколько букв в слове "Привет"?</p>
+        </div>
+        <div>
+            <p><input type="radio" name="option1" value="6">6</p>
+            <p><input type="radio" name="option1" value="2">2</p>
+            <input type="submit" value="Next" id="button">
+        </div>
+    </div>
+    <div class="second_question">
+        <div>
+            <p>Сколько букв в слове "МИР"?</p>
+        </div>
+        <div>
+            <p><input type="radio" name="option2" value="3">3</p>
+            <p><input type="radio" name="option2" value="4">4</p>
+            <input type="submit" value="Finish" id="button">
+        </div>
+    </div>
+    <div>
+        <p>Результат:</p>
+        <p id="res"></p>
+    </div>
+    
+
+</body>
+</html>

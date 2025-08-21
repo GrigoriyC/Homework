@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 3.</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="./script.js" defer></script>
+    
+</head>
+<body>
+    
+
+    <!-- Задание 3
+Создать html-страницу с формой для ввода стилизованного текста. После заполнения формы, вывести текст на экран в соответствии с указанными стилями.
+ -->
+
+    <div class="messages-container">
+    </div>
+    <div>
+        <form action="">
+            <div class="radio">
+                <p><input type="radio" value="bold" name="fontStyle" checked>Bold</p>
+                <p><input type="radio" value="underline" name="fontStyle">Underline</p>
+                <p><input type="radio" value="italics" name="fontStyle">Italics</p>
+                <p><input type="radio" value="left" name="fontStyle">Left</p>
+                <p><input type="radio" value="right" name="fontStyle">Right</p>
+                <p><input type="radio" value="justify" name="fontStyle">Justify</p>
+            </div>
+            <div>
+                <label for="userText">Your message:</label>
+                <br>
+                <textarea name="userText" id="userText" cols="55" rows="10"></textarea>
+            </div>
+            <input type="submit" value="Show text" id="button">
+            
+        </form>
+    </div>
+
+</body>
+</html>

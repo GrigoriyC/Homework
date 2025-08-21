@@ -1,0 +1,33 @@
+* {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #492E71;
+}
+
+body {
+  background-color: #ffefdc;
+}
+
+.mission {
+  width: 1000px;
+  height: auto;
+  margin-top: 50px;
+  border-radius: 15px;
+  background: #FFFACD;
+  box-shadow: 0 14px 28px #ffd4a0, 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.gallery {
+  margin: 0 auto;
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.gallery a img {
+  height: 50px;
+}

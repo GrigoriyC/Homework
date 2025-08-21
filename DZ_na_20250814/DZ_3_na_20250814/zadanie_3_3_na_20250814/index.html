@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 3.</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="./script.js" defer></script>
+</head>
+<body>
+
+    <!-- Задание 3
+Создать html-страницу с блоками информации, которые открываются по щелчку на заголовок. В один момент времени может быть развернут только один блок информации.
+ -->
+
+    <section class="mission">
+      <div class="container">
+        <h4 class="titleBlock" onclick="toggleBlock(0)">What is Lorem Ipsum?</h2>
+        <div id="block0" class="block">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. A architecto
+          nemo amet, alias dolorem natus placeat repudiandae quidem facere at
+          quos in ullam, expedita numquam vitae rem quaerat illo voluptatibus.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi atque
+          quaerat ducimus voluptate consectetur, nulla repellat vitae modi sed
+          sapiente.
+        </div>
+        <h4 class="titleBlock" onclick="toggleBlock(1)">Why do we use it?</h2>
+        <div id="block1" class="block">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. A architecto
+          nemo amet, alias dolorem natus placeat repudiandae quidem facere at
+          quos in ullam, expedita numquam vitae rem quaerat illo voluptatibus.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, eos. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure cumque ea ratione esse rem expedita aperiam deleniti eum ab cum assumenda perferendis, necessitatibus veniam deserunt rerum consequatur quos similique dicta?
+        </div>
+        <h4 class="titleBlock" onclick="toggleBlock(2)">Where does it come from?</h2>
+        <div id="block2" class="block">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. A architecto
+          nemo amet, alias dolorem natus placeat repudiandae quidem facere at
+          quos in ullam, expedita numquam vitae rem quaerat illo voluptatibus.
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas
+          maiores aspernatur ea maxime quas ut ducimus magnam aut? Dolor, culpa!
+        </div>
+        <h4 class="titleBlock" onclick="toggleBlock(3)">Where can I get some?</h2>
+        <div id="block3" class="block">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. A architecto
+          nemo amet, alias dolorem natus placeat repudiandae quidem facere at
+          quos in ullam, expedita numquam vitae rem quaerat illo voluptatibus.
+        </div>
+      </div>
+    </section>
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 6.</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    
+
+    <!-- Задание 6
+Создать html-страницу с возможностью забронировать билеты на поезд. 
+Для начала пользователь выбирает направление поезда и дату поездки, дальше отмечает места для брони. 
+Также добавить возможность посмотреть уже забронированные билеты. Хранить информацию в заранее подготовленных массивах.
+ -->
+
+    <div id="box">
+    <form id="frm">
+        <fieldset>
+            <legend>Booking</legend>
+            <div class="flex" >
+                <label>Direction:
+                    <select id="sel"></select>
+                </label>
+                <label>Date: <input id="dat" type="date" /></label>
+                <button id="btn">Search</button>
+            </div>
+            <div id="hide" class="flex hide">
+                <table>
+                    <caption>My tickets</caption>
+                    <thead>
+                        <tr><th>Direction</th><th>Date</th><th>Seat</th></tr>
+                    </thead>
+                    <tbody id="cnt"></tbody>
+                </table>
+            </div>          
+            <hr />
+            <div id="tab" class="flex"></div>
+            <div class="flex">
+                <button id="del">Delete storage</button>
+                <div>Total price: <span id="prs">0,00 ₽</span></div>
+                <button id="btk">Book</button>
+            </div>
+        </fieldset>
+    </form>
+</div>
+
+</body>
+</html>

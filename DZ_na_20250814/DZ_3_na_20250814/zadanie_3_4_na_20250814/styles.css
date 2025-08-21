@@ -1,0 +1,44 @@
+* {
+  margin: 0 auto;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #492E71;
+}
+
+body {
+  background-color: #ffefdc;
+}
+
+.mission {
+  margin-top: 50px;
+  padding: 30px;
+  width: 80vw;
+  height: auto;
+  border-radius: 5px;
+  background: #FFFACD;
+  box-shadow: 0 14px 28px #ffd4a0, 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.wraper {
+  margin: 0 auto;
+  padding: 0 10px;
+  max-width: 800px;
+  height: 20vw;
+  border: 10px solid #fbf2e9;
+  background-color: #fff;
+  overflow: scroll;
+}
+.wraper h4 {
+  margin: 0;
+  padding: 5px 0;
+}
+.wraper p {
+  margin: 5px 0;
+  padding: 0;
+}
+.loadingIcon {
+  background: url(loading1.gif) center / 30px no-repeat;
+  margin: 0 auto;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}

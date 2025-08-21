@@ -1,0 +1,32 @@
+* {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 18px;
+}
+
+body {
+  height: 3000px;
+  background-color: #ffefdc;
+}
+
+.mission {
+  margin-top: 50px;
+}
+
+#field {
+  width: 600px;
+  height: 404px;
+  background-image: url(playing_field.jpg);
+  background-size: cover;
+  position: relative;
+
+  border-radius: 5px;
+  box-shadow: 0 14px 28px #ffd4a0, 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+#ball {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 1s;
+}

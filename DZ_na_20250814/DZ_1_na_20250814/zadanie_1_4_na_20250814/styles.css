@@ -1,0 +1,56 @@
+* {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  height: 3000px;
+  background-color: #ffefdc;
+}
+
+.mission {
+  width: 600px;
+  height: 250px;
+  background: #FFFACD;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 14px 28px #ffd4a0, 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.trafficlLightColor {
+  width: 400px;
+  height: 100px;
+  border: 1px solid #f9aa33;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  box-shadow: 1px 1px 1px 1px #ffd4a0;
+}
+
+.light {
+  width: 80px;
+  height: 80px;
+  background-color: #FFFACD;
+  border-radius: 50%;
+  border: 1px solid #f9aa33;
+  box-shadow: 1px 1px 1px 1px #ffd4a0;
+}
+
+#btnLight {
+  padding: 10px 20px;
+  border-radius: 4px;
+  background-color: #FFFACD;
+  box-shadow: 1px 1px 1px #ffd4a0;
+  border: 1px solid #f9aa33;
+  color: #f9aa33;
+  outline: none;
+}
+
+#btnLight:hover {
+  background: #fdf5ac;
+  cursor: pointer;
+}

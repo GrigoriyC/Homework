@@ -1,0 +1,27 @@
+* {
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #492E71;
+}
+
+body {
+  background-color: #ffefdc;
+}
+
+.mission {
+  height: auto;
+  background-color: #FFFACD;
+  margin: 20px auto;
+  padding: 30px 30px 30px 0px;
+  max-width: 900px;
+  font-size: 14px;
+  box-shadow: 0 14px 28px #ffd4a0, 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.mission_table {
+  margin-left: 35px;
+}
+.selected {
+  background-color: #f9aa33;
+  color: white;
+}
