@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Путешествие</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="./slider.js" defer></script>
+    <script src="./script.js" defer></script>
+</head>
+
+<body>
+    <!-- Заголовок для всей страницы. -->
+    <header>
+        <h1>Достопримечательности Санкт-Петербурга</h1>
+    </header>
+
+    <!-- Создаем меню. -->
+    <nav>
+        <div class="mainMenu">
+            <ul >
+                <!-- Меню для перехода по страницам. -->
+                <li class="liMenu"><a href="./index.html">Главная</a></li>
+                <li class="liMenu"><a href="./reviews.html"">Отзывы</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <button id="switchThemeBtn" class="switchThemeBtn">Сменить тему</button>
+
+
+
+    <!-- +++++++++++++++++++++++++++++++++ -->
+
+    <!-- Создаем основную часть страницы. -->
+    <main>
+
+        <!-- Создаем слайдер. -->
+        <div class="carowsel">
+        <div class="carowsel-output">
+            <div class="slider">
+                <div class="img-conteiner">
+                    <img class="img" src="./reviews_img/001.jpg" alt="picture">
+                </div>
+                <div class="img-conteiner">
+                    <img class="img" src="./reviews_img/002.jpg" alt="picture">
+                </div>
+                <div class="img-conteiner">
+                    <img class="img" src="./reviews_img/003.jpg" alt="picture">
+                </div>
+                <div class="img-conteiner">
+                    <img class="img" src="./reviews_img/004.jpg" alt="picture">
+                </div>
+            </div>
+        </div>
+        <!-- Создаем кнопки для для появления следующего изображения. -->
+        <div class="carowsel-control">
+                <button class="btn">P R E V</button>
+                <button class="btn">N E X T</button>
+            </div>
+    </div>
+
+
+    </main>
+
+    <!-- Создаем футер. -->
+    <footer>
+        <table>
+            <tr>
+                <td>О сайте</td>
+                <td>Поддержка</td>
+                <td>Наши сообщества</td>
+                <td>Разработка</td>
+            </tr>
+            <tr>
+                <td><a href="#!">RSS-лента блога</a></td>
+                <td><a href="#!">Помощь по продукту</a></td>
+                <td><a href="#!">Сообщество</a></td>
+                <td><a href="#!">Веб-технологии</a></td>
+            </tr>
+            <tr>
+                <td><a href="#!">Блог</a></td>
+                <td><a href="#!">Сообщить о проблеме</a></td>
+                <td><a href="#!">Форум</a></td>
+                <td><a href="#!">Научитесь веб-разработке</a></td>
+            </tr>
+        </table>
+    </footer>
+
+    <button id="scrollToTopBtn" class="btnScrollUp">
+            ↑
+        </button>
+
+</body>
+
+</html>
