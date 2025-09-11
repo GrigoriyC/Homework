@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ДЗ на 20250909.</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Мой список дел</h1>
+            <p>Задачи сохраняются автоматически</p>
+        </div>
+        
+        <div class="input-section">
+            <input type="text" id="task-input" placeholder="Введите новую задачу...">
+            <button id="add-task-btn">Добавить задачу</button>
+        </div>
+        
+        <div class="tasks-list" id="tasks-container">
+            <!-- Динамическое добавление задач -->
+        </div>
+        
+        <div class="stats">
+            <span id="total-tasks">Total: 0 tasks</span>
+            <span id="completed-tasks">Completed: 0 tasks</span>
+        </div>
+    </div>
+
+</body>
+</html>
