@@ -1,0 +1,81 @@
+-- Задание:
+-- Создайте таблицы: Категории, Лайкнувшие пользователи. Свяжите их с постами. Нужно выбрать подходящую связь.
+
+-- +++++++++++++++++++++++++++++++++++++++++++++
+
+-- Исходный код.
+
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  first_name VARCHAR(25) NOT NULL,
+  last_name VARCHAR(25) NOT NULL,
+  email VARCHAR(30) UNIQUE,
+  age INTEGER CHECK (age > 18),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE posts (
+  id SERIAL PRIMARY KEY,
+  author_id INTEGER NOT NULL,
+  -- author_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  title VARCHAR(200) NOT NULL,
+  content TEXT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+  FOREIGN KEY (author_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+CREATE TABLE tags (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(40) UNIQUE NOT NULL
+);
+
+
+CREATE TABLE posts_tags (
+  post_id INTEGER NOT NULL REFERENCES posts(id) ON DELETE CASCADE,
+  tag_id INTEGER NOT NULL REFERENCES tags(id) ON DELETE CASCADE,
+  PRIMARY KEY (post_id, tag_id)
+);
+
+INSERT INTO users (first_name, last_name, age)
+VALUES ('Misha', 'Ivanov', 22);
+
+INSERT INTO users (first_name, last_name, email)
+VALUES ('Dima', 'Leskiv', 'miva23@mail.ru');
+
+INSERT INTO posts (author_id, title)
+VALUES ('Misha', 'Ivanov', 22);
+
+SELECT * FROM users;
+
+-- +++++++++++++++++++++++++++++++++++++++++++++
+
+-- Выполнение задания.
+
+-- Создаем таблицу Категории.
+
+CREATE TABLE categories (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(50) UNIQUE NOT NULL
+);
+
+-- Создаем таблицу Лайкнувшие юзеры.
+
+CREATE TABLE liked_users  (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(50) UNIQUE NOT NULL
+);
+
+-- Создаем промежуточные таблицы.
+
+CREATE TABLE posts_categories (
+  post_id INTEGER NOT NULL REFERENCES posts(id) ON DELETE CASCADE,
+  categories_id INTEGER NOT NULL REFERENCES tags(id) ON DELETE CASCADE,
+  PRIMARY KEY (post_id, categories_id)
+);
+
+CREATE TABLE posts_liked_users (
+  post_id INTEGER NOT NULL REFERENCES posts(id) ON DELETE CASCADE,
+  liked_users_id INTEGER NOT NULL REFERENCES tags(id) ON DELETE CASCADE,
+  PRIMARY KEY (post_id, liked_users_id)
+);
