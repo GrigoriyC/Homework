@@ -1,0 +1,52 @@
+-- Задание 1.
+-- Создать таблицу Games, связать с аккаунтом (ManyToMany).
+
+-- Создаем таблицы users и accounts.
+
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  first_name VARCHAR(25) NOT NULL,
+  last_name VARCHAR(25) NOT NULL,
+  email VARCHAR(30) UNIQUE,
+  age INTEGER CHECK (age > 18),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE accounts (
+  user_id INTEGER PRIMARY KEY UNIQUE,
+  username VARCHAR(25) NOT NULL,
+  password VARCHAR(25) NOT NULL,
+  
+  
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+
+-- Создаем таблицу games, где -
+--- game_id - уникальный идентификатор игры (первичный ключ)
+--- user_id - ссылка на пользователя из таблицы accounts (внешний ключ)
+--- game_name - название игры
+--- score - счет игрока
+--- level - текущий уровень
+--- play_time - время игры в секундах
+
+CREATE TABLE games (
+  game_id INTEGER PRIMARY KEY UNIQUE,
+  user_id INTEGER NOT NULL,
+  game_name VARCHAR(50) NOT NULL,
+  score INTEGER DEFAULT 0,
+  level INTEGER DEFAULT 0,
+  play_time INTEGER DEFAULT 0,
+    
+  FOREIGN KEY (user_id) REFERENCES accounts(user_id) ON DELETE CASCADE
+);
+
+
+-- Создаем промежуточную таблицу для таблиц accounts и games.
+
+CREATE TABLE accounts_games (
+  accounts_id INTEGER NOT NULL REFERENCES accounts(user_id) ON DELETE CASCADE,
+  games_id INTEGER NOT NULL REFERENCES games(game_id) ON DELETE CASCADE,
+  PRIMARY KEY (accounts_id, games_id)
+);
+
