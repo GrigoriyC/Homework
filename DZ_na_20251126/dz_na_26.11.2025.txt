@@ -1,0 +1,9 @@
+Поработал с гитом, поэкспериментировал с командами:
+git push, 
+git pull, 
+git commit, 
+git status, 
+git add ., 
+git init, 
+git clone, 
+и т.д.
