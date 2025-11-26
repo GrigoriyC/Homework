@@ -1,0 +1,1 @@
+Потренировался с репозиториями в создании,  командах: git push, git pull, git commit, git status, git add ., git init, git clone, т.д.
